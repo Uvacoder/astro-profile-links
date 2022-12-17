@@ -15,6 +15,9 @@ import purgecss from 'astro-purgecss';
 // https://astro.build/config
 
 // https://astro.build/config
+import vanillaExtract from "astro-vanilla-extract";
+
+// https://astro.build/config
 export default defineConfig({
   srcDir: './src',
   integrations: [mdx(), tailwind(), image({
@@ -32,7 +35,7 @@ export default defineConfig({
   AstroPWA({
     registerType: 'autoUpdate',
     injectRegister: 'auto'
-  }), critters(), purgecss()],
+  }), critters(), purgecss(), vanillaExtract()],
   output: "server",
   adapter: cloudflare()
 });
