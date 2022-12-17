@@ -154,21 +154,21 @@ let colorObject = {
 
 
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {},
-		linearBorderGradients: theme => ({
-			colors: theme('colors'),
-		}),
-	},
-	daisyui: {
-		mytheme: {
-			...themes["[data-theme=synthwave]"],
-	}
-	},
-	plugins: [
-		require('@tailwindcss/typography'),
-		require("daisyui"),
-		pluginBorderGradients()
-	],
+  content: ["./src/**/*.{astro,js,jsx,md,mdx,ts,tsx}"],
+  theme: {
+    extend: {},
+    linearBorderGradients: (theme) => ({
+      colors: theme("colors"),
+    }),
+  },
+  daisyui: {
+    mytheme: {
+      ...themes["[data-theme=synthwave]"],
+    },
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+    pluginBorderGradients(),
+  ],
 };

@@ -1,5 +1,5 @@
 import linksJson from './links.json'
-import types from './links.d.ts'
+// import types from './links.d.ts'
 
 export const SITE = {
 	title: 'Rod Kisten',

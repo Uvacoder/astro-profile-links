@@ -14,9 +14,14 @@ declare module 'virtual:pwa-register' {
 }
 
 
-// declare module './src/links.json' {
-//     declare module "*.json" {
-//         const value: any;
-//         export default value;
-//       }
-// }
+
+interface ImportMetaEnv {
+    readonly WORD: string;
+    readonly PUBLIC_POKEAPI: string;
+    // more env variables...
+  }
+  
+  interface ImportMeta {
+    readonly env: ImportMetaEnv;
+  }
+  
