@@ -1,0 +1,521 @@
+{
+  "data": {
+    "getLinks": {
+      "items": [
+        {
+          "id": 274108194,
+          "type": "CLASSIC",
+          "title": "One more link aggregator",
+          "url": "https://linkr.bio/kisten",
+          "active": true,
+          "position": 0,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": null,
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": {
+            "isIncompleteTemplateLink": null,
+            "__typename": "TemplateLinkContext"
+          },
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [],
+          "__typename": "Link"
+        },
+        {
+          "id": 274015322,
+          "type": "TWITTER_GENERIC",
+          "title": "",
+          "url": "https://twitter.com/kistenrod",
+          "active": true,
+          "position": 1,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": null,
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": null,
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [
+            {
+              "code": "INCOMPLETE_URL_LINK",
+              "level": "WARNING",
+              "path": [],
+              "context": {
+                "provider": null,
+                "__typename": "MessageContext"
+              },
+              "__typename": "Message"
+            }
+          ],
+          "__typename": "Link"
+        },
+        {
+          "id": 269691327,
+          "type": "YOUTUBE_VIDEO",
+          "title": "KSTN",
+          "url": "https://youtu.be/fSeluzHAY4A",
+          "active": true,
+          "position": 2,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": "https://assets.production.linktr.ee/913cbf7d96277b3dce409ac585cd3c9cc215eb98/icons/tabler-icons/brand-youtube.svg",
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": {
+            "embedOption": "EMBED_VIDEO",
+            "autoplay": true,
+            "mute": true,
+            "subscribe": null,
+            "__typename": "YoutubeLinkContext"
+          },
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [],
+          "__typename": "Link"
+        },
+        {
+          "id": 116787466,
+          "type": "HEADER",
+          "title": "PROFESSIONAL ",
+          "url": "",
+          "active": true,
+          "position": 3,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": null,
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": {
+            "layoutOption": "stack",
+            "__typename": "HeaderLinkContext"
+          },
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [],
+          "__typename": "Link"
+        },
+        {
+          "id": 267844995,
+          "type": "CLASSIC",
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/oirodolfo",
+          "active": true,
+          "position": 4,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": "https://d1fdloi71mui9q.cloudfront.net/J82MqBEOTz2lLW95ka6B_LinkedIn.png",
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": {
+            "isIncompleteTemplateLink": null,
+            "__typename": "TemplateLinkContext"
+          },
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [],
+          "__typename": "Link"
+        },
+        {
+          "id": 267845171,
+          "type": "CLASSIC",
+          "title": "Github",
+          "url": "https://github.com/oirodolfo",
+          "active": true,
+          "position": 5,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": "https://assets.production.linktr.ee/913cbf7d96277b3dce409ac585cd3c9cc215eb98/icons/tabler-icons/brand-github.svg",
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": {
+            "isIncompleteTemplateLink": null,
+            "__typename": "TemplateLinkContext"
+          },
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [],
+          "__typename": "Link"
+        },
+        {
+          "id": 270065378,
+          "type": "CLASSIC",
+          "title": "Polywork",
+          "url": "http://poly.me/rodkisten",
+          "active": true,
+          "position": 6,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": "https://d1fdloi71mui9q.cloudfront.net/uxI6eF8QgKWoqrMXeWIE_IMG_9508.PNG",
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": {
+            "isIncompleteTemplateLink": null,
+            "__typename": "TemplateLinkContext"
+          },
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [],
+          "__typename": "Link"
+        },
+        {
+          "id": 267844691,
+          "type": "HEADER",
+          "title": "SOCIAL",
+          "url": "",
+          "active": true,
+          "position": 7,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": null,
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": {
+            "layoutOption": "stack",
+            "__typename": "HeaderLinkContext"
+          },
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [],
+          "__typename": "Link"
+        },
+        {
+          "id": 259141506,
+          "type": "TWITTER_STATUS_LATEST",
+          "title": "Twitter",
+          "url": "https://twitter.com/KistenRod",
+          "active": true,
+          "position": 8,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": "https://d1fdloi71mui9q.cloudfront.net/SjSaR5ofQU6Wp38quGx1_Twitter.png",
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": {
+            "embedOption": "LINK_OFF",
+            "__typename": "TwitterLinkContext"
+          },
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [],
+          "__typename": "Link"
+        },
+        {
+          "id": 116787481,
+          "type": "CLASSIC",
+          "title": "Instagram",
+          "url": "https://instagram.com/rodkisten",
+          "active": true,
+          "position": 9,
+          "modifiers": {
+            "animation": null,
+            "forwardingEnd": null,
+            "forwardingTimezone": null,
+            "scheduledStatus": {
+              "on": false,
+              "started": null,
+              "ended": null,
+              "__typename": "ScheduledStatus"
+            },
+            "scheduleEndTimezone": null,
+            "scheduleEnd": null,
+            "scheduleStartTimezone": null,
+            "scheduleStart": null,
+            "thumbnailUrl": "https://d1fdloi71mui9q.cloudfront.net/E8cXdWiyQRi089KLTcES_Instagram.png",
+            "amazonAffiliate": null,
+            "__typename": "LinkModifiers"
+          },
+          "linkContext": {
+            "isIncompleteTemplateLink": null,
+            "__typename": "TemplateLinkContext"
+          },
+          "rules": {
+            "gate": {
+              "activeOrder": [],
+              "blocked": [],
+              "age": null,
+              "passcode": null,
+              "nft": null,
+              "sensitiveContent": {
+                "enforced": false,
+                "suggested": false,
+                "optedOut": false,
+                "__typename": "SensitiveContentGateRule"
+              },
+              "payment": null,
+              "__typename": "GateRule"
+            },
+            "__typename": "LinkRules"
+          },
+          "messages": [],
+          "__typename": "Link"
+        }
+      ],
+      "totalCount": 28,
+      "__typename": "LinksPage"
+    }
+  }
+}

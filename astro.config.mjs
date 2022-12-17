@@ -4,6 +4,20 @@ import tailwind from '@astrojs/tailwind';
 import image from '@astrojs/image';
 
 // https://astro.build/config
+import cloudflare from "@astrojs/cloudflare";
+
+// https://astro.build/config
+import partytown from "@astrojs/partytown";
+
+// https://astro.build/config
+import prefetch from "@astrojs/prefetch";
+
+// https://astro.build/config
+import react from "@astrojs/react";
+
+// https://astro.build/config
 export default defineConfig({
-	integrations: [mdx(), tailwind(), image()],
+  integrations: [mdx(), tailwind(), image(), partytown(), prefetch(), react()],
+  output: "server",
+  adapter: cloudflare()
 });
