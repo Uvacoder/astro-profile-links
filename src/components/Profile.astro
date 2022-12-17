@@ -4,26 +4,26 @@ import { Image, Picture } from '@astrojs/image/components';
 import avatarImg from '../assets/images/avatar.jpg';
 ---
 
-<div class="dark:bg-gray-800/4 glass !w-auto rounded-2xl bg-white shadow-lg">
+<div class="glass !w-auto rounded-2xl bg-white shadow-lg">
   <!-- <img alt="profil" src="/images/images/avatar.jpg" class="w-full mb-4 rounded-t-lg h-28"/> -->
   <div class="-mt-16 flex flex-col items-center justify-center p-4">
     <Picture
-      widths={[400, 800, 1200]}
+      widths={[400]}
       aspectRatio="1:1"
       src={avatarImg}
-      formats={['avif', 'jpeg', 'png', 'webp']}
+      formats={['avif', 'jpeg', 'webp']}
       class="mx-auto object-cover rounded-full h-16 w-16 border-2 border-white dark:border-gray-800"
     />
 
-    <a href="#" class="relative block">
-      <Image
-        alt="profil"
-        src="../assets/images/avatar.jpg"
-        className="mx-auto object-cover rounded-full h-16 w-16 "
-        width={60}
-        height={60}
-      />
-    </a>
+    {/*<a href="#" class="relative block">*/}
+    {/*  <Image*/}
+    {/*    alt="profil"*/}
+    {/*    src="../assets/images/avatar.jpg"*/}
+    {/*    className="mx-auto object-cover rounded-full h-16 w-16 "*/}
+    {/*    width={60}*/}
+    {/*    height={60}*/}
+    {/*  />*/}
+    {/*</a>*/}
 
     <p class="mt-2 text-xl font-medium text-gray-800 dark:text-white">Rod</p>
     <p class="mb-4 text-xs text-gray-400">Kisten</p>

@@ -5,6 +5,9 @@ export interface Props {
   canonicalUrl: URL;
 }
 
+import {AstroSeo} from '@astrolib/seo'
+
+
 const { frontmatter, canonicalUrl } = Astro.props as Props;
 const formattedContentTitle = `${frontmatter.title} 🚀 ${SITE.title}`;
 const imageSrc = frontmatter.image?.src ?? OPEN_GRAPH.image.src;
@@ -12,24 +15,59 @@ const canonicalImageSrc = new URL(imageSrc, Astro.site);
 const imageAlt = frontmatter.image?.alt ?? OPEN_GRAPH.image.alt;
 ---
 
-<!-- Page Metadata -->
-<link rel="canonical" href={canonicalUrl} />
-
-<!-- OpenGraph Tags -->
-<meta property="og:title" content={formattedContentTitle} />
-<meta property="og:type" content="article" />
-<meta property="og:url" content={canonicalUrl} />
-<meta property="og:locale" content={frontmatter.ogLocale ?? SITE.defaultLanguage} />
-<meta property="og:image" content={canonicalImageSrc} />
-<meta property="og:image:alt" content={imageAlt} />
-<meta name="description" property="og:description" content={frontmatter.description ?? SITE.description} />
-<meta property="og:site_name" content={SITE.title} />
-
-<!-- Twitter Tags -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content={OPEN_GRAPH.twitter} />
-<meta name="twitter:title" content={formattedContentTitle} />
-<meta name="twitter:description" content={frontmatter.description ?? SITE.description} />
-<meta name="twitter:image" content={canonicalImageSrc} />
-<meta name="twitter:image:alt" content={imageAlt} />
+    <AstroSeo
+        title="Rod Kisten"
+        description="Rod Costa, KSTN..."
+        canonical="https://rodkisten.dev/"
+        openGraph={{
+          url: 'https://www.url.ie/a',
+          title: 'Rod Kisten',
+          description: 'My personal page',
+          images: [
+            {
+              url: 'https://www.example.ie/og-image-01.jpg',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+            {
+              url: 'https://www.example.ie/og-image-02.jpg',
+              width: 900,
+              height: 800,
+              alt: 'Og Image Alt Second',
+              type: 'image/jpeg',
+            },
+            { url: 'https://www.example.ie/og-image-03.jpg' },
+            { url: 'https://www.example.ie/og-image-04.jpg' },
+          ],
+          site_name: 'RodKisten',
+        }}
+        twitter={{
+          handle: '@KistenRod',
+          // site: '@site',
+          cardType: 'summary_large_image',
+        }}
+    />
+//
+// <!-- Page Metadata -->
+// <link rel="canonical" href={canonicalUrl} />
+//
+// <!-- OpenGraph Tags -->
+// <meta property="og:title" content={formattedContentTitle} />
+// <meta property="og:type" content="article" />
+// <meta property="og:url" content={canonicalUrl} />
+// <meta property="og:locale" content={frontmatter.ogLocale ?? SITE.defaultLanguage} />
+// <meta property="og:image" content={canonicalImageSrc} />
+// <meta property="og:image:alt" content={imageAlt} />
+// <meta name="description" property="og:description" content={frontmatter.description ?? SITE.description} />
+// <meta property="og:site_name" content={SITE.title} />
+//
+// <!-- Twitter Tags -->
+// <meta name="twitter:card" content="summary_large_image" />
+// <meta name="twitter:site" content={OPEN_GRAPH.twitter} />
+// <meta name="twitter:title" content={formattedContentTitle} />
+// <meta name="twitter:description" content={frontmatter.description ?? SITE.description} />
+// <meta name="twitter:image" content={canonicalImageSrc} />
+// <meta name="twitter:image:alt" content={imageAlt} />
 
