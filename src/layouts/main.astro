@@ -1,241 +1,234 @@
 ---
 import '@fontsource/inter';
 import '@fontsource/twinkle-star';
-import "../styles/global.css"
+import '../styles/global.css';
 
 const { content } = Astro.props;
 import { Image, Picture } from '@astrojs/image/components';
+import { pwaInfo } from 'virtual:pwa-info';
 
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{content.title}</title>
-	</head>
-	<body>
-        <Picture src={import("../assets/hero.png")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="descriptive text" />
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{content.title}</title>
 
+    <script src="/src/pwa.ts"></script>
+    { pwaInfo && console.log({pwaInfo}) || <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
+
+  </head>
+  <body>
+    <Picture
+      src={import('../assets/hero.png')}
+      widths={[200, 400, 800]}
+      sizes="(max-width: 800px) 100vw, 800px"
+      alt="descriptive text"
+    />
+    <slot />
+  </body>
 </html>
 <style>
+  @import 'open-props/style';
+  @import 'open-props/buttons';
+  @import 'open-props/animations';
+  @import 'open-props/postcss/gradients';
 
+    .button {
+      font-size: var(--font-size-fluid-1);
+      padding-inline: var(--size-5);
+      padding-block: var(--size-3);
 
+      color: var(--blue-0);
+      background-color: var(--blue-7);
+      border: none;
+      border-radius: var(--radius-round);
+      box-shadow: var(--shadow-1);
 
-@import "open-props/style";
-@import "open-props/buttons";
-@import "open-props/animations";
-@import "open-props/postcss/gradients";
+      &:hover {
+        box-shadow: var(--shadow-6);
+      }
 
-	@layer {
-.button {
-  font-size: var(--font-size-fluid-1);
-  padding-inline: var(--size-5);
-  padding-block: var(--size-3);
-
-  color: var(--blue-0);
-  background-color: var(--blue-7);
-  border: none;
-  border-radius: var(--radius-round);
-  box-shadow: var(--shadow-1);
-
-  &:hover {
-    box-shadow: var(--shadow-6);
-  }
-
-  @media (--OSdark) {
-    background: var(--blue-2);
-    color: var(--blue-9);
-  }
-}
-
-	:root {
-	--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-	--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-	--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-	--color-text: hsl(12, 5%, 4%);
-	--color-bg: hsl(10, 21%, 95%);
-	--color-border: hsl(17, 24%, 90%);
+      @media (--OSdark) {
+        background: var(--blue-2);
+        color: var(--blue-9);
+      }
     }
-	html {
-	font-family: 'Inter',  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: var(--font-size-base);
-	color: var(--color-text);
-	background-color: var(--color-bg);
-	}
-	body {
-	margin: 0;
-}
 
 
+  :root {
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+    --color-text: hsl(12, 5%, 4%);
+    --color-bg: hsl(10, 21%, 95%);
+    --color-border: hsl(17, 24%, 90%);
+  }
+  html {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+  body {
+    margin: 0;
+  }
 
-
-
-
-
-
-
-
-
-
-.bg-gradient-blur-wrapper {
+  .bg-gradient-blur-wrapper {
     position: absolute;
     width: 100%;
     max-width: 44%;
     min-height: 74%;
-    opacity: .5;
+    opacity: 0.5;
     -webkit-filter: blur(100px);
-    filter: blur(100px)
-}
+    filter: blur(100px);
+  }
 
-.bg-gradient-blur-wrapper.integrations-hero {
-    display: none
-}
+  .bg-gradient-blur-wrapper.integrations-hero {
+    display: none;
+  }
 
-.bg-gradient-blur-wrapper.big {
+  .bg-gradient-blur-wrapper.big {
     max-width: 35%;
-    min-height: 90%
-}
+    min-height: 90%;
+  }
 
-.bg-gradient-blur-wrapper.big.blog-hero {
+  .bg-gradient-blur-wrapper.big.blog-hero {
     top: -160px;
     right: -226px;
-    opacity: .4
-}
+    opacity: 0.4;
+  }
 
-.bg-gradient-blur-wrapper.big.blog-post {
+  .bg-gradient-blur-wrapper.big.blog-post {
     top: -329px;
     right: -177px;
-    overflow: visible
-}
+    overflow: visible;
+  }
 
-.bg-gradient-blur-wrapper.home-hero-2 {
+  .bg-gradient-blur-wrapper.home-hero-2 {
     left: auto;
     top: auto;
     right: 0;
     bottom: 10%;
     z-index: -1;
     display: block;
-    opacity: .3;
+    opacity: 0.3;
     -webkit-filter: blur(100px);
-    filter: blur(100px)
-}
+    filter: blur(100px);
+  }
 
-.bg-gradient-blur-wrapper.home-hero-1 {
+  .bg-gradient-blur-wrapper.home-hero-1 {
     position: absolute;
     left: -10%;
     top: -10%;
     z-index: -1;
     display: block;
-    opacity: .3;
+    opacity: 0.3;
     -webkit-filter: blur(100px);
-    filter: blur(100px)
-}
+    filter: blur(100px);
+  }
 
-.bg-gradient-blur-wrapper.home-steps {
+  .bg-gradient-blur-wrapper.home-steps {
     max-width: 40%;
-    min-height: 40%
-}
+    min-height: 40%;
+  }
 
-.bg-gradient-blur-wrapper.integrations-hero {
+  .bg-gradient-blur-wrapper.integrations-hero {
     top: -116px;
     right: -98px;
-    min-height: 80%
-}
+    min-height: 80%;
+  }
 
-.bg-gradient-blur-wrapper.careers-1 {
+  .bg-gradient-blur-wrapper.careers-1 {
     left: -427px;
     top: 5px;
-    min-height: 54%
-}
+    min-height: 54%;
+  }
 
-.bg-gradient-blur-wrapper.blog {
+  .bg-gradient-blur-wrapper.blog {
     left: -224px;
     top: 467px;
     z-index: 0;
-    min-height: 37%
-}
+    min-height: 37%;
+  }
 
-.bg-gradient-blur-wrapper.blog-post-articles {
+  .bg-gradient-blur-wrapper.blog-post-articles {
     left: -359px;
-    bottom: -63px
-}
+    bottom: -63px;
+  }
 
-.bg-gradient-blur-wrapper.not-found-2 {
+  .bg-gradient-blur-wrapper.not-found-2 {
     right: -232px;
     bottom: 171px;
     z-index: -1;
     overflow: hidden;
-    min-height: 40%
-}
+    min-height: 40%;
+  }
 
-.bg-gradient-blur-wrapper.not-found-1 {
+  .bg-gradient-blur-wrapper.not-found-1 {
     left: -403px;
     top: -145px;
     z-index: -1;
     max-width: 57%;
-    min-height: 85%
-}
+    min-height: 85%;
+  }
 
-.bg-gradient-blur-wrapper.contact-hero {
+  .bg-gradient-blur-wrapper.contact-hero {
     z-index: -1;
-    opacity: .3;
+    opacity: 0.3;
     right: 0;
     bottom: 0;
-    min-height: 170%
-}
+    min-height: 170%;
+  }
 
-.bg-gradient-blur-wrapper.left {
+  .bg-gradient-blur-wrapper.left {
     left: 0;
     top: 0;
-    z-index: -1
-}
+    z-index: -1;
+  }
 
-.bg-gradient-blur-wrapper.left.dim {
-    opacity: .16
-}
+  .bg-gradient-blur-wrapper.left.dim {
+    opacity: 0.16;
+  }
 
-.bg-gradient-blur-wrapper.community {
+  .bg-gradient-blur-wrapper.community {
     left: auto;
     top: 0;
     right: 10%;
     bottom: 0;
     z-index: -1;
-    opacity: .3
-}
+    opacity: 0.3;
+  }
 
-.bg-gradient-blur-wrapper.careers-2 {
+  .bg-gradient-blur-wrapper.careers-2 {
     right: -322px;
     bottom: -402px;
-    min-height: 54%
-}
+    min-height: 54%;
+  }
 
-.bg-gradient-blur-wrapper.integration {
+  .bg-gradient-blur-wrapper.integration {
     left: -583px;
     top: 133px;
-    min-height: 50%
-}
+    min-height: 50%;
+  }
 </style>
 
 <style is:global>
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+  h2 {
+    font-size: var(--font-size-lg);
+  }
 
- 	h1 {
-	font-size: var(--font-size-xl);
-}
-	h2 {
-	font-size: var(--font-size-lg);
-}
-
-:where(h1, h2, h3, h4) {
-		font-family: 'Space Grotesk';
-	}
-code {
-	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-	Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-
+  :where(h1, h2, h3, h4) {
+    font-family: 'Space Grotesk';
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+      monospace;
+  }
 </style>

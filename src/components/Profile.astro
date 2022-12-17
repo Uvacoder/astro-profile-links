@@ -1,33 +1,19 @@
 ---
-import { LINKS } from "../config";
+import { LINKS } from '../config';
 import { Image, Picture } from '@astrojs/image/components';
-import avatarImg from "../assets/images/avatar.jpg"
+import avatarImg from '../assets/images/avatar.jpg';
 ---
 
-<div class="glass bg-white shadow-lg rounded-2xl !w-auto dark:bg-gray-800/4">
+<div class="dark:bg-gray-800/4 glass !w-auto rounded-2xl bg-white shadow-lg">
   <!-- <img alt="profil" src="/images/images/avatar.jpg" class="w-full mb-4 rounded-t-lg h-28"/> -->
-  <div class="flex flex-col items-center justify-center p-4 -mt-16">
-    
-    <Picture 
+  <div class="-mt-16 flex flex-col items-center justify-center p-4">
+    <Picture
       widths={[400, 800, 1200]}
-      aspectRatio="1:1" 
+      aspectRatio="1:1"
       src={avatarImg}
-      formats={['avif','jpeg', 'png','webp']}
+      formats={['avif', 'jpeg', 'png', 'webp']}
       class="mx-auto object-cover rounded-full h-16 w-16 border-2 border-white dark:border-gray-800"
-      />
-    <!-- <a href="#" class="relative block">
-      <Picture widths={[400, 800, 1200]} aspectRatio="1:1" src={avatarImg}
-      
-      class="mx-auto object-cover rounded-full h-16 w-16 border-2 border-white dark:border-gray-800"
-
-      >
-      <!-- <Image
-       format="jpg"
-        alt="profil"
-  -->
-      <!-- /> -->
-    <!-- </Picture> --> 
-    <!-- </a> -->
+    />
 
     <a href="#" class="relative block">
       <Image
@@ -41,23 +27,17 @@ import avatarImg from "../assets/images/avatar.jpg"
 
     <p class="mt-2 text-xl font-medium text-gray-800 dark:text-white">Rod</p>
     <p class="mb-4 text-xs text-gray-400">Kisten</p>
-    <p class="p-2 px-4 text-xs text-white bg-pink-500 rounded-full">
-      Professional
-    </p>
-    <div class="w-full p-2 mt-4 rounded-lg">
-      <div
-        class="glass flex items-center justify-between text-sm text-gray-600 dark:text-gray-200"
-      >
-      <ul class="grid grid-cols-1">
-        <!-- <ul className="menu bg-base-100 w-56 p-2 rounded-box"> -->
+    <p class="rounded-full bg-pink-500 p-2 px-4 text-xs text-white">Professional</p>
+    <div class="mt-4 w-full rounded-lg p-2">
+      <div class="glass flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">
+        <ul class="grid grid-cols-1">
+          <!-- <ul className="menu bg-base-100 w-56 p-2 rounded-box"> -->
           {
             LINKS.map((link, i) => {
               return (
-              <a href={link.url} target="_blank" rel="noopener noreferer">
-                <li key={`link-${i}`}>
-                    {link.title}
-                </li>
-            </a>
+                <a href={link.url} target="_blank" rel="noopener noreferer">
+                  <li key={`link-${i}`}>{link.title}</li>
+                </a>
               );
             })
           }
@@ -69,137 +49,5 @@ import avatarImg from "../assets/images/avatar.jpg"
 </div>
 
 <style>
-  .button-outlined-gradient {
-    display: inline-block;
-    margin: 10px;
-    padding: 2px;
-    border-radius: 9999px;
-    background-image: linear-gradient(
-        180deg,
-        hsla(0, 0%, 100%, 0.2),
-        hsla(0, 0%, 100%, 0.2)
-      ),
-      linear-gradient(145deg, #0fa, #0af 25%, #9f6eff 50%, #fd66cb 75%, #fa0);
-    box-shadow: 0 3px 7px 0 rgba(19, 17, 26, 0.14);
-    -webkit-transform: scale3d(1, 1, 1.01);
-    transform: scale3d(1, 1, 1.01);
-    -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
-    transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
-    transition: transform 0.3s cubic-bezier(1, 0, 0, 1),
-      -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  .button-outlined-gradient:hover {
-    -webkit-transform: scale3d(1.04, 1.04, 1.01);
-    transform: scale3d(1.04, 1.04, 1.01);
-  }
-
-  .button-outlined-gradient:active {
-    -webkit-transform: scale3d(0.96, 0.96, 1.01);
-    transform: scale3d(0.96, 0.96, 1.01);
-  }
-
-  .button-outlined-gradient.header-button {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  .button-outlined-gradient.no-margin {
-    margin: 0;
-  }
-
-  /* ℹ️ Base selector: .button-filled */
-/* ✨ TailwindCSS: "flex justify-center font-medium text-lg leading-4 my-2 ml-5 mr-10 py-5 px-8 static text-center tracking-wide whitespace-no-wrap" */
-/* ⚠️ Some properties could not be matched with Tailwind classes. Use @apply to extend a CSS rule: */
-.button-filled {
-  @apply flex justify-center font-medium text-lg leading-4 my-2 ml-5 mr-10 py-5 px-8 static text-center tracking-wide whitespace-no-wrap;
-  z-index: 1;
-  border-radius: 1000px;
-  background-color: rgba(66, 0, 255, 1);
-  box-shadow: 0 30px 40px 0 rgba(7, 0, 20, 0.05),
-    0 4px 6px 0 rgba(7, 0, 20, 0.05), 0 10px 15px -3px rgba(7, 0, 20, 0.1),
-    0 0 0 1px rgba(7, 0, 20, 0.24), inset 0 1px 0 1px hsla(0, 0%, 100%, 0.2),
-    inset 0 -1px 0 1px rgba(24, 0, 112, 0.2);
-  transform: scale3d(1, 1, 1.01);
-  transition: transform 0.3s cubic-bezier(1, 0, 0, 1),
-    -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
-  color: rgba(16, 16, 19, 1);
-}
-/* ⚠️ Some properties are requiring specific variants, but the variant does not support those. Consider extending your Tailwind config.
-hover:
-	transform: scale3d(1.04, 1.04, 1.01);
-  	color: rgba(16, 16, 19, 1);
-*/
-
-/* ℹ️ Base selector: .button-filled:active */
-/* ❌ Could not match any TailwindCSS classes. */
-
-/* ℹ️ Base selector: .button-filled.button-white-outline */
-/* ✨ TailwindCSS: "bg-transparent border-white border-solid border" */
-
-  /* .button-filled {
-    position: static;
-    z-index: 1;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 10px 40px 10px 20px;
-    padding: 22px 36px;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    border-radius: 1000px;
-    background-color: #4200ff;
-    background-image: linear-gradient(
-        180deg,
-        hsla(0, 0%, 100%, 0.4),
-        hsla(0, 0%, 100%, 0) 50%
-      ),
-      linear-gradient(180deg, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.2)),
-      linear-gradient(55deg, #fa0, #fd66cb 25%, #9f6eff 50%, #0af 75%, #0fa);
-    box-shadow: 0 30px 40px 0 rgba(7, 0, 20, 0.05),
-      0 4px 6px 0 rgba(7, 0, 20, 0.05), 0 10px 15px -3px rgba(7, 0, 20, 0.1),
-      0 0 0 1px rgba(7, 0, 20, 0.24), inset 0 1px 0 1px hsla(0, 0%, 100%, 0.2),
-      inset 0 -1px 0 1px rgba(24, 0, 112, 0.2);
-    -webkit-transform: scale3d(1, 1, 1.01);
-    transform: scale3d(1, 1, 1.01);
-    -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
-    transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
-    transition: transform 0.3s cubic-bezier(1, 0, 0, 1),
-      -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
-    color: #101013;
-    font-size: 18px;
-    line-height: 1.111em;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.01786em;
-    white-space: nowrap;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  .button-filled:hover {
-    -webkit-transform: scale3d(1.04, 1.04, 1.01);
-    transform: scale3d(1.04, 1.04, 1.01);
-    color: #101013;
-  }
-
-  .button-filled:active {
-    -webkit-transform: scale3d(0.96, 0.96, 1.01);
-    transform: scale3d(0.96, 0.96, 1.01);
-  }
-
-  .button-filled.button-white-outline {
-    border: 1px solid #fff;
-    background-color: transparent;
-  } */
-
-
-
 
 </style>

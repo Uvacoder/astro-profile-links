@@ -1,15 +1,15 @@
 ---
 import '../styles/theme.css';
 import '../styles/index.css';
-import GoogleAnalytics from '@/components/GoogleAnalytics'
-import { Icon } from 'astro-icon'
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+import { Icon } from 'astro-icon';
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 
-<link rel="icon" type="image/svg+xml" href={<Icon name="mdi:account" />} />
+<link rel="icon" type="image/svg+xml" href={(<Icon name="mdi:account" />)} />
 
 <link rel="sitemap" href="/sitemap.xml" />
 
@@ -21,16 +21,15 @@ import { Icon } from 'astro-icon'
 	rel="stylesheet"
 /> -->
 
-
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
-	const root = document.documentElement;
-	const theme = localStorage.getItem('theme');
-	if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-		root.classList.add('theme-dark');
-	} else {
-		root.classList.remove('theme-dark');
-	}
+  const root = document.documentElement;
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    root.classList.add('theme-dark');
+  } else {
+    root.classList.remove('theme-dark');
+  }
 </script>
 
 <GoogleAnalytics />

@@ -4,8 +4,8 @@ export interface Props {
   partytown: boolean;
 }
 const { GA_ID, partytown = false } = Astro.props;
-const attrs = partytown ? { type: "text/partytown" } : {};
-const id = GA_ID || import.meta.env.GOOGLE_ANALYTICS_KEY
+const attrs = partytown ? { type: 'text/partytown' } : {};
+const id = GA_ID || import.meta.env.GOOGLE_ANALYTICS_KEY;
 ---
 
 <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} {...attrs}></script>
@@ -15,7 +15,6 @@ const id = GA_ID || import.meta.env.GOOGLE_ANALYTICS_KEY
   function gtag() {
     window.dataLayer.push(arguments);
   }
-  gtag("js", new Date());
-  gtag("config", id);
+  gtag('js', new Date());
+  gtag('config', id);
 </script>
-
