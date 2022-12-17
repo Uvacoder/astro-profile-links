@@ -22,6 +22,7 @@
     "@astrojs/cloudflare": "^5.0.0",
     "@astrojs/image": "0.12.1",
     "@astrojs/mdx": "^0.13.0",
+    "@astrojs/node": "^4.0.0",
     "@astrojs/partytown": "^1.0.2",
     "@astrojs/prefetch": "^0.1.1",
     "@astrojs/react": "^1.2.2",

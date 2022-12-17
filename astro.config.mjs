@@ -11,13 +11,9 @@ import react from "@astrojs/react";
 import AstroPWA from '@vite-pwa/astro';
 import critters from "astro-critters";
 import purgecss from 'astro-purgecss';
-
-// https://astro.build/config
-
-// https://astro.build/config
 import vanillaExtract from "astro-vanilla-extract";
+import node from '@astrojs/node';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://oirodolfo.github.io',
   base: '/my-repo',
@@ -40,5 +36,9 @@ export default defineConfig({
     injectRegister: 'auto'
   }), critters(), purgecss(), vanillaExtract()],
   output: "server",
+  adapter: node({
+    mode: 'standalone'
+  }),
+
   // adapter: cloudflare()
 });
