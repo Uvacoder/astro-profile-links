@@ -1,5 +1,6 @@
 ---
 import Profile from '../components/Profile.astro';
+import Test from '../components/Test.astro'
 import json from '../links.json';
 ---
 
@@ -13,23 +14,26 @@ import json from '../links.json';
   </head>
 
   <body>
-    <div class="grid h-screen place-items-center content-center">
-      {/*<Button>Tailwind Button in Astro!</Button>*/}
+    {/*<div className="grid h-screen place-items-center content-center">*/}
+    {/*<Button>Tailwind Button in Astro!</Button>*/}
 
       <Profile />
-    </div>
+
+      <hr />
+
+  <Test />
   </body>
 </html>
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
-  const root = document.documentElement;
-  const theme = localStorage.getItem('theme');
-  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    root.classList.add('theme-dark');
-  } else {
-    root.classList.remove('theme-dark');
-  }
+  {/*const root = document.documentElement;*/}
+  {/*const theme = localStorage.getItem('theme');*/}
+  {/*if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {*/}
+  {/*  root.classList.add('theme-dark');*/}
+  {/*} else {*/}
+  {/*  root.classList.remove('theme-dark');*/}
+  {/*}*/}
 </script>
 
 <style>

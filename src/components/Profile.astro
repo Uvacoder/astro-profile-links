@@ -46,9 +46,8 @@ const webLinks = await response.json()
     console.log(Astro)
 }
 ---
-<div class="glass !w-auto rounded-2xl bg-white shadow-lg">
+<div class="rounded-2xl shadow-lg">
   <!-- <img alt="profil" src="/images/images/avatar.jpg" class="w-full mb-4 rounded-t-lg h-28"/> -->
-  <div class="-mt-16 flex flex-col items-center justify-center p-4">
     <Picture
         alt={"profile"}
       widths={[400]}
@@ -68,11 +67,12 @@ const webLinks = await response.json()
     {/*  />*/}
     {/*</a>*/}
 
-    <p class="mt-2 text-xl font-medium text-gray-800 dark:text-white">Rod</p>
-    <p class="mb-4 text-xs text-gray-400">Kisten</p>
-    <p class="rounded-full bg-pink-500 p-2 px-4 text-xs text-white">Professional</p>
+    <p className="mt-2 text-xl font-medium text-gray-800 dark:text-white">Rod Kisten</p>
+    <p className="mt-2 font-small text-gray-800 dark:text-white">Rod Kisten</p>
+    <div
+        className="absolute inset-x-0 bottom-0 z-1 h-4 bg-gradient-to-b from-transparent to-bg-primary shadow-[inset_0_32px_32px_-32px_rgba(255,255,255,0.4)] shadow-white backdrop-blur-lg dark:to-gray-900 dark:shadow-none sm:h-20"></div>
     <div class="mt-4 w-full rounded-lg p-2">
-      <div class="glass flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">
+      <div class="">
         <ul class="grid grid-cols-1">
           <!-- <ul className="menu bg-base-100 w-56 p-2 rounded-box"> -->
           {
@@ -84,13 +84,338 @@ const webLinks = await response.json()
               );
             })
           }
+
+            <a className="group relative col-span-full flex flex-col items-center gap-2 overflow-hidden rounded bg-gradient-to-r from-gray-850 to-gray-900 p-3 pt-4 text-center shadow-2xl shadow-black/45 md:col-span-8 md:flex-row md:items-start md:pt-3 md:text-left lg:gap-8 lg:p-4"
+               href="/features/boost">
+                <div className="absolute inset-x-0 top-1/2 z-1 flex -translate-y-1/2 items-center top-8 bg-red-500/10"
+                     style="height: 2px; filter: blur(4px);">
+                    <div
+                        className="relative h-full w-full rounded bg-gradient-to-r to-transparent will-change-transform from-red-500/50"
+                        style="height: 2px; transform: translateX(100%) translateZ(0px);"></div>
+                </div>
+                <div className="absolute inset-x-0 top-1/2 z-1 flex -translate-y-1/2 items-center top-9 bg-blue-500/10"
+                     style="height: 2px; filter: blur(0px);">
+                    <div
+                        className="relative h-full w-full rounded bg-gradient-to-r to-transparent will-change-transform from-blue-500/50"
+                        style="height: 2px; transform: translateX(100%) translateZ(0px);"></div>
+                </div>
+                <div className="absolute inset-x-0 top-1/2 z-1 flex -translate-y-1/2 items-center top-10 bg-red-500/10"
+                     style="height: 2px; filter: blur(0px);">
+                    <div
+                        className="relative h-full w-full rounded bg-gradient-to-r to-transparent will-change-transform from-red-500/50"
+                        style="height: 2px; transform: translateX(100%) translateZ(0px);"></div>
+                </div>
+                <div
+                    className="absolute inset-x-0 top-1/2 z-1 flex -translate-y-1/2 items-center top-12.5 bg-blue-500/10"
+                    style="height: 12px; filter: blur(4px);">
+                    <div
+                        className="relative h-full w-full rounded bg-gradient-to-r to-transparent will-change-transform from-blue-500/50"
+                        style="height: 12px; transform: translateX(100%) translateZ(0px);"></div>
+                </div>
+                <div className="absolute top-1/2 left-1/2 rounded-full bg-blue-500/30 blur-3xl square-40"></div>
+                <div className="absolute bottom-1/2 right-3/4 rounded-full bg-blue-500/10 blur-3xl square-40"></div>
+                <div className="z-1 flex h-full flex-col justify-between">
+                    <div className="mb-1.5"><span
+                        className="inline-flex rounded-full border border-green-light bg-green-light py-sm px-1 text-xs font-normal leading-[13px] text-green">New</span>
+                    </div>
+                    <div className="space-y-1"><h4 className="font-medium">PlanetScale Boost</h4><p
+                        className="text-sm text-secondary">Up to 1,000× your query performance in just a few clicks with
+                        our groundbreaking query&nbsp;cache.</p>
+                        <div className="text-sm">
+                            <button
+                                className="group inline-flex h-5 gap-sm whitespace-nowrap rounded-full border border-primary text-sm font-semibold transition flex-center focus:outline-none focus:ring focus:ring-orange-300 disabled:pointer-events-none disabled:!border-primary disabled:!bg-secondary disabled:!text-secondary dark:focus:ring-orange-500/40 text-light dark:text-dark bg-gray-900 dark:bg-gray-50 border-text !h-auto !p-0 !border-none !bg-transparent !text-inherit !focus:ring-orange-500 pr-2 pl-2.5"
+                                type="button">Join the waitlist
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" fill="none" stroke-width="1.5"
+                                     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                     className="flex-shrink-0 text-orange" aria-hidden="true" role="img">
+                                    <path
+                                        className="origin-center scale-x-0 transition-transform group-hover:scale-x-100"
+                                        d="M12 8H4"></path>
+                                    <path className="transition-transform group-hover:translate-x-xs"
+                                          d="M6.5 11.5L9.64645 8.35355C9.84171 8.15829 9.84171 7.84171 9.64645 7.64645L6.5 4.5"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="z-1 max-md:order-first">
+                    <div
+                        className="inline-flex h-icon w-icon rounded-icon-glass bg-gradient-to-b from-red-200/15 to-blue-500/10 p-md shadow-2xl shadow-blue-600/35 ring-1 ring-white/15">
+                        <div
+                            className="relative flex h-full w-full overflow-hidden rounded-icon bg-gradient-to-br from-gray-850 to-gray-900 shadow-2xl saturate-200 flex-center"
+                            style="box-shadow: rgba(71, 183, 248, 0.25) 0px 2px 4px -1px inset, rgba(0, 0, 0, 0.6) 0px -2px 6px inset;">
+                            <div
+                                className="absolute inset-1 z-1 rounded-full bg-gradient-to-br from-black/50 to-black"></div>
+                            <div className="absolute inset-1 z-2 flex rotate-[-35deg] flex-center">
+                                <div className="absolute h-xs w-full" style="transform: none;">
+                                    <div className="h-xs w-1 rounded bg-gradient-to-r from-white/0 to-white/75"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(25.4545deg) translateZ(0px);">
+                                    <div className="h-xs w-1 rounded bg-gradient-to-r from-white/0 to-white/75"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(50.9091deg) translateZ(0px);">
+                                    <div className="h-xs w-1 rounded bg-gradient-to-r from-white/0 to-white/75"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(76.3636deg) translateZ(0px);">
+                                    <div className="h-xs w-1 rounded bg-gradient-to-r from-white/0 to-white/75"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(101.818deg) translateZ(0px);">
+                                    <div className="h-xs w-1 rounded bg-gradient-to-r from-white/0 to-white/75"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(127.273deg) translateZ(0px);">
+                                    <div className="h-xs w-1 rounded bg-gradient-to-r from-white/0 to-white/75"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(152.727deg) translateZ(0px);">
+                                    <div className="h-xs w-1 rounded bg-gradient-to-r from-white/0 to-white/75"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(178.182deg) translateZ(0px);">
+                                    <div className="h-xs w-1 rounded bg-gradient-to-r from-white/0 to-white/75"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(203.636deg) translateZ(0px);">
+                                    <div
+                                        className="h-xs w-1 rounded bg-gradient-to-r from-yellow-200/0 to-yellow-200"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(229.091deg) translateZ(0px);">
+                                    <div
+                                        className="h-xs w-1 rounded bg-gradient-to-r from-yellow-200/0 to-yellow-200"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(254.545deg) translateZ(0px);">
+                                    <div
+                                        className="h-xs w-1 rounded bg-gradient-to-r from-red-500/0 via-red-500 to-red-500/10"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(280deg) translateZ(0px);">
+                                    <div
+                                        className="h-xs w-1 rounded bg-gradient-to-r from-red-500/0 via-red-500 to-red-500/10"></div>
+                                </div>
+                            </div>
+                            <div className="absolute inset-1 z-3 flex rotate-[-22deg] flex-center">
+                                <div className="absolute h-xs w-full" style="transform: none;">
+                                    <div className="h-xs w-sm rounded bg-gradient-to-r from-white/0 to-white/40"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(25.4deg) translateZ(0px);">
+                                    <div className="h-xs w-sm rounded bg-gradient-to-r from-white/0 to-white/40"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(50.8deg) translateZ(0px);">
+                                    <div className="h-xs w-sm rounded bg-gradient-to-r from-white/0 to-white/40"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(76.2deg) translateZ(0px);">
+                                    <div className="h-xs w-sm rounded bg-gradient-to-r from-white/0 to-white/40"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(101.6deg) translateZ(0px);">
+                                    <div className="h-xs w-sm rounded bg-gradient-to-r from-white/0 to-white/40"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(127deg) translateZ(0px);">
+                                    <div className="h-xs w-sm rounded bg-gradient-to-r from-white/0 to-white/40"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(152.4deg) translateZ(0px);">
+                                    <div className="h-xs w-sm rounded bg-gradient-to-r from-white/0 to-white/40"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(177.8deg) translateZ(0px);">
+                                    <div className="h-xs w-sm rounded bg-gradient-to-r from-white/0 to-white/40"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(203.2deg) translateZ(0px);">
+                                    <div
+                                        className="h-xs w-sm rounded bg-gradient-to-r from-yellow-200/0 to-yellow-200/50"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(228.6deg) translateZ(0px);">
+                                    <div
+                                        className="h-xs w-sm rounded bg-gradient-to-r from-yellow-200/0 to-yellow-200/50"></div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(254deg) translateZ(0px);">
+                                    <div
+                                        className="h-xs w-sm rounded bg-gradient-to-r from-red-500/0 to-red-500/25"></div>
+                                </div>
+                            </div>
+                            <div className="absolute inset-[21px] z-4 flex rotate-[-35deg] flex-center">
+                                <div className="absolute h-xs w-full" style="transform: none;">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 0.1; text-shadow: black 1px 2px 4px; transform: rotate(35deg) translateZ(0px);">0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(25.4545deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 0.2; text-shadow: black 1px 2px 4px; transform: rotate(9.54545deg) translateZ(0px);">1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(50.9091deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 0.3; text-shadow: black 1px 2px 4px; transform: rotate(-15.9091deg) translateZ(0px);">2
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(76.3636deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 0.4; text-shadow: black 1px 2px 4px; transform: rotate(-41.3636deg) translateZ(0px);">3
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(101.818deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 0.5; text-shadow: black 1px 2px 4px; transform: rotate(-66.8182deg) translateZ(0px);">4
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(127.273deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 0.6; text-shadow: black 1px 2px 4px; transform: rotate(-92.2727deg) translateZ(0px);">5
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(152.727deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 0.7; text-shadow: black 1px 2px 4px; transform: rotate(-117.727deg) translateZ(0px);">6
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(178.182deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 0.8; text-shadow: black 1px 2px 4px; transform: rotate(-143.182deg) translateZ(0px);">7
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(203.636deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 0.9; text-shadow: black 1px 2px 4px; transform: rotate(-168.636deg) translateZ(0px);">8
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(229.091deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 1; text-shadow: black 1px 2px 4px; transform: rotate(-194.091deg) translateZ(0px);">9
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(254.545deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className=""
+                                             style="opacity: 1; text-shadow: black 1px 2px 4px; transform: rotate(-219.545deg) translateZ(0px);">10
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute h-xs w-full"
+                                     style="transform: rotate(280deg) translateZ(0px);">
+                                    <div className="flex h-xs w-xs text-2xs font-semibold italic flex-center">
+                                        <div className="text-[#ff455d] will-change-[opacity]"
+                                             style="opacity: 1; text-shadow: black 1px 2px 4px; transform: rotate(-245deg) translateZ(0px);">11
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="absolute inset-2 z-5 flex rotate-[-215deg] flex-center">
+                                <div
+                                    className="relative flex h-xs w-full items-center justify-end will-change-transform"
+                                    style="transform: rotate(276.27deg) translateZ(0px);">
+                                    <div
+                                        className="absolute left-1/2 h-sm w-sm -translate-x-1/2 rounded bg-orange-500 shadow shadow-black"></div>
+                                    <div className="h-xs w-5.5 rounded bg-orange-500"
+                                         style="box-shadow: rgba(243, 88, 21, 0.9) 4px 0px 8px;"></div>
+                                </div>
+                            </div>
+                            <div
+                                className="absolute inset-sm z-6 rounded-full bg-gradient-to-br from-blue-300/15 to-blue-300/0"
+                                style="box-shadow: rgba(71, 183, 248, 0.1) 1px 1px inset, rgba(255, 255, 255, 0.04) 28px 28px 1px -16px inset, rgba(0, 0, 0, 0.9) 0px 6px 12px 2px, rgba(71, 183, 248, 0.1) 0px 0px 24px 2px;"></div>
+                            <div
+                                className="absolute inset-sm z-7 rounded-full bg-gradient-to-br from-red-600/0 to-red-600/20 will-change-[opacity]"
+                                style="box-shadow: rgba(193, 16, 39, 0.9) -0.5px -0.5px inset, rgba(193, 16, 39, 0.6) -12px -20px 22px -16px inset, rgba(0, 0, 0, 0.6) 2px 4px 8px 1px, rgba(193, 16, 39, 0.25) 4px 8px 16px 2px; opacity: 0.883355;"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </ul>
-        <button class="button-filled"> I am a button</button>
+          <div className="flex-auto flex space-x-4">
+              <button className="h-10 px-6 font-semibold rounded-md bg-black text-white hover:bg-sky-700" type="submit">
+                  Buy now
+              </button>
+              <button className="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900 dark:md:hover:bg-fuchsia-600"
+                      type="button">
+                  Add to bag
+              </button>
+          </div>
+
+          <button class="button-filled bg-stripes-fuchsia"> I am a button</button>
+          <button class="bg-gradient-purple enterprise-border-gradient-purple"> I am a button</button>
       </div>
     </div>
   </div>
-</div>
 
 <style>
 
+
+    .bg-gradient-purple {
+@apply bg-gradient-to-bl;
+    @apply from-purple-500;
+    @apply to-purple-600;
+}
+
+    .bg-gradient-orange {
+@apply bg-gradient-to-bl;
+    @apply from-orange-400;
+    @apply to-orange-500;
+}
+
+    .bg-gradient-yellow {
+@apply bg-gradient-to-bl;
+    @apply from-yellow-500;
+    @apply to-yellow-600;
+}
+
+    .enterprise-border-gradient-purple {
+    padding: 1px;
+    border: 1px solid;
+    border-image: linear-gradient(150.67deg, #b7a5fb -11.25%, rgba(62, 66, 77, 0) 93.67%) 1;
+    border-radius: 6px;
+}
+
+    .enterprise-cta-background {
+    background: rgba(0, 0, 0, 0.33);
+    backdrop-filter: blur(2px);
+}
+    .bg-stripes-fuchsia {
+    background-color: #e879f91a;
+    background-image: linear-gradient(135deg,#d946ef80 10%,transparent 0,transparent 50%,#d946ef80 0,#d946ef80 60%,transparent 0,transparent);
+    background-size: 7.07px 7.07px;
+}
 </style>

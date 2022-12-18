@@ -16,10 +16,11 @@ import node from '@astrojs/node';
 
 export default defineConfig({
   site: 'https://oirodolfo.github.io',
-  base: '/my-repo',
+  base: '/',
 
   srcDir: './src',
   integrations: [mdx(), tailwind(), image({
+    serviceEntryPoint: '@astrojs/image/sharp',
     logLevel: "debug",
     cacheDir: '.image-cache/'
   }), partytown({
